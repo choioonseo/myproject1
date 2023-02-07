@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: green;
+        }
+        a {
+            /* 기본선택자(테그선택) */
+            color: blue;
+        }
+
+        a:hover {
+            /* 가상선택자(마우스 올렸을 때) */
+            background: purple;
+            color: white;
+            text-decoration: pink;
+            
+        }
+
+        button:hover {
+            /* 가상선택자(마우스 올렸을 때) */
+            background: black;
+            color: white;
+            text-decoration: lime;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com">네이버로</a>
+    <a href="http://www.daum.com">다음으로</a>
+    <button>
+        나의 즐겨찾기로
+    </button>
+    <button>
+        나의 메모장으로
+    </button>
+</body>
+</html>

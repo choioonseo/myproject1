@@ -1,0 +1,85 @@
+<!-- 
+    float: left: 왼쪽부터
+     float: right: 오른쪽부터
+     static: 기본값, 위에서 아래로 배치
+     relative: 이미 있는 것에 상대적으로 배치
+     absolute: 절대 위치
+     fixed: 고정위치, 스크롤에 따라 움직이지 않음
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a
+        {
+            text-decoration: none;
+        }
+        li
+        {
+            width: 70px;
+            height: 20px;
+            list-style: none;
+            float: left;
+            padding: 15px;
+            /* padding: 사이 간격 띄워줌 */
+        }
+
+        a:hover
+        {
+            background: red;
+        }
+
+
+        li:last-child
+        {
+            border-radius: 0 50px 50px 0;
+        }
+
+        li:first-child
+        {
+            border-radius: 50px 0 0 50px;
+             /* 각각의 테두리 동글게 */
+        }
+
+
+
+        li:nth-child(2n)
+        /* 짝수 번쨰 */
+        {
+            background: orange;
+        }
+
+        li:nth-child(2n+1)
+        /* 홀수 번쨰 */
+        {
+            background: yellow;
+        }
+
+    </style>
+
+ </head>
+ <body>
+    <ul>
+        <!-- 순서 없는 목록 -->
+        <li>
+            <a href="page1.html">회원가입</a>
+        </li>
+        <li>
+            <a href="page2.html">제품정보</a>
+        </li>
+        <li>
+            <a href="page3.html">게시판</a>
+        </li>
+        <li>
+            <a href="page4.html">장바구니</a>
+        </li>
+
+    </ul>
+ </body>
+ </html>

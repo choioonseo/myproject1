@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: yellow;
+            color: blue; /* 글자색 지정 */
+        }
+
+        h1 {
+            background: burlywood;
+        }
+
+        a{
+            text-decoration: overline ; 
+            /* 윗줄로 강조 */
+            color: blueviolet;
+            background: burlywood;
+            font-size: 100px;
+            font-family: 궁서;
+            font-weight: bold;
+            font-style: italic
+        }
+
+        #you {
+            /* 기본선택자(id선택, 하나만 선택)-> #id명 */
+            color: lime;
+        }
+
+        .we {
+            /* 기본선택자(class선택, 여러 개 선택, 즉 묶음처리)-> .we명 */
+            border-color: red;
+            /* 테두리 색 */
+
+        }
+
+        .we2{
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="we2">페이지 11입니다.</h1>
+    <h1 class="we">페이지 22입니다.</h1>
+    <h1 id="you"  class="we2"> 페이지 33입니다.</h1>
+    <a class="we" href="page2.html">2페이지로</a>
+</body>
+</html>
