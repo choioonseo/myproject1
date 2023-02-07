@@ -1,0 +1,40 @@
+<!-- prompt(‘당신이 주로 가는 포털사이트는’)인 경우, 
+naver이면 www.naver.com로 자동 이동, 
+daum이면 www.daum.net으로 자동 이동, 
+다른 사이트이면 www.google.com으로 자동이동  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+      
+      site = prompt("당신이 주로 가는 포털사이트")
+
+      if(site==naver)
+      {
+        Location.href = "https://www.naver.com"
+      }
+
+      else if (site==daum)
+      {
+        Location.href = "https://www.daum.com"
+      }
+      else
+      {
+        Location.href = "https://www.google.com"
+      }
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

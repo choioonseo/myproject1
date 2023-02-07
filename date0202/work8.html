@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function hi()
+        {
+            alert('두 시간 뒤에 끝나요')
+        }
+
+        function bi()
+        {
+            alert('끝났어요')
+        }
+
+        function check()
+        {
+            id = "root"
+            pw = "1234"
+
+//                 //dom(태그들) 찾는겁니다
+// 4:29
+// <input id='test'/>
+// 4:29
+// 뭐 이런 html태그가 body태그내에 잇다면
+// 4:30
+// document.getElementbyid('test') 하면
+// 4:30
+// 저 input 태그가 선택되는 겁니다 ㅇㅇ
+// 흰색_확인_표시
+
+           id2 = document.getElementById('id2').value //"root"
+           pw2 = document.getElementById('pw2').value //"1234"
+           //id2가 id와 일치, pw2가 pw와 일치 둘 다 만족시
+           //alert('로그인 성공'). 아니면 alert('로그인 실패')
+
+
+           result = document,getElementById('result') 
+
+           if (id == id2 && pw == pw2)
+           {
+            alert('로그인 성공')
+
+            //result 안에 오른쪽에 있는 내용을 html코드로 안쪽에 집어넣음
+            result.innerHTML = "<font color=red> 로그인 성공 </font>"
+           }
+           else{
+            alert('로그인 실패')
+            result.innerHTML = "<font color=blue> 로그인 실패 </font>"
+           }
+        }
+
+        
+    </script>
+
+</head>
+<body>
+
+    <button onclick="hi()">인사처리 </button>
+    <button onclick="bi()">안녕처리 </button>
+    <hr color="red">
+    아이디: <input type="text" id="id2" value="root"> <br>
+    패스워드: <input type="text" id="pw2" value="1234"> <br>
+    <button onclick = "check()"> 로그인처리 </button> <br>
+    <div id = "result> 결과 들어갈 곳 </div>
+    
+</body>
+</html>

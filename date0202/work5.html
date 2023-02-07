@@ -1,0 +1,37 @@
+<!-- //  커피값과 구매카운트를 입력받아서
+결제금액을 계산후(커피값 * 구매카운트)
+15000원 이상이면 “할인해드릴게요”, 아니면 “정가로 내셔야해요” -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        coffee = prompt("커피값을 입력하시오.")
+        many = prompt("커피 갯수")
+        many2 = parseInt(many)
+        result = coffee * many2
+        
+
+        if (result>15000) {
+            alert("할인해드릴게요.")
+        }
+
+        else
+        {
+            alert("정가로 내셔야 해요.") 
+        }
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
