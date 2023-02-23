@@ -1,0 +1,121 @@
+<script1.sql>
+
+-- 테이블명 + 항목명 + 항목에 낮은 데이터 유형
+ -- 주석 장식 한 줄 띄어쓰기 실행됨
+ 
+ 테이블  구성원 생성 2(
+	ID varchar2 ( 100 ),
+	pw varchar2 ( 100 ),
+	이름 varchar2 ( 100 ),
+	전화 varchar2 ( 100 )
+)
+
+
+
+ 테이블  작성 bbs2 (
+	ID varchar2 ( 100 ),
+	제목 varchar2 ( 100 ),
+	콘텐츠 varchar2 ( 100 ),
+	작가 varchar2 ( 100 )
+)
+
+
+
+ 테이블 " HR "을 생성합니다 . " 제품2 " 
+   (	 " ID "  VARCHAR2 ( 100 ),
+	" 이름 "  VARCHAR2 ( 100 ),
+	" 콘텐츠 "  VARCHAR2 ( 100 ),
+	" 가격 "  번호 ( 38 , 0 )
+   )
+
+
+<script2.sql>
+ 
+CREATE TABLE member2 (
+	id varchar2(100),
+	pw varchar2(100),
+	name varchar2(100),
+	tel varchar2(100)
+) 
+
+
+
+CREATE TABLE bbs2 (
+	id varchar2(100),
+	title varchar2(100),
+	content varchar2(100),
+	writer varchar2(100)
+) 
+
+
+
+CREATE TABLE "HR"."PRODUCT22" 
+   (	"ID" VARCHAR2(100), 
+	"NAME" VARCHAR2(100), 
+	"CONTENT" VARCHAR2(100), 
+	"PRICE" NUMBER(38,0)
+   )
+   
+   
+   
+   
+   CREATE TABLE "HR"."MEMBER3" 
+   (	"ID" VARCHAR2(100), 
+	"PW" VARCHAR2(100), 
+	"NAME" VARCHAR2(100), 
+	"TEL" VARCHAR2(100)
+   )
+   
+   INSERT INTO "MEMBER" VALUES ('김길동',11, 111)
+   
+   INSERT INTO "MEMBER" VALUES ('이길동',8, 888)
+   
+INSERT INTO "MEMBER" VALUES ('최길동',7,777 )
+
+
+--select * : 모든 칼럼들 검색
+
+--select age, tel하면 age와 tel컬럼만 검색
+
+--from뒤에는 테이블명
+
+SELECT * FROM "MEMBER" -- 모든 컬럼 
+
+SELECT name FROM "MEMBER"
+
+SELECT age, tel FROM "MEMBER"
+
+
+
+<script3.sql>
+
+CREATE TABLE "HR"."HOBBY" 
+   (	"HOBBYID" VARCHAR2(100), 
+	"CONTENT" VARCHAR2(100), 
+	"LOCATION" VARCHAR2(100)
+   )
+   
+   
+   CREATE TABLE "HR"."HOBBY2" 
+   (	"HOBBYID" VARCHAR2(100), 
+	"CONTENT" VARCHAR2(100), 
+	"LOCATION" VARCHAR2(100)
+   )
+   
+     
+   
+   INSERT INTO "HOBBY2" VALUES ('run','run', 'seoul')
+   
+   INSERT INTO "HOBBY2" VALUES ('book','book', 'busan')
+
+   
+   SELECT * FROM "HOBBY" -- 모든 컬럼 
+
+SELECT content FROM "HOBBY"
+
+SELECT location, content FROM "HOBBY"
+
+
+
+
+
