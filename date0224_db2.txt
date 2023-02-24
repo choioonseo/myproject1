@@ -1,0 +1,184 @@
+
+CREATE TABLE "HR"."NOTICE" 
+   (	"BOARDNO" NUMBER(38,0), 
+	"TITLE" VARCHAR2(100), 
+	"CONTENTS" VARCHAR2(100), 
+	"WRITER" VARCHAR2(100), 
+	"WRITEDATE" DATE, 
+	"RECOMMEND" NUMBER(38,0), 
+	"VIEWCOUNT" NUMBER(38,0)
+   )
+   
+   --추천게시판(recommend)만들기
+   --re_no:숫자, title, content, writer: 문자 
+   
+   
+   
+CREATE TABLE "HR"."RECOMMEND" (	
+	"RE_DNO" NUMBER(38,0), 
+	"TITLE" VARCHAR2(100), 
+	"CONTENTS" VARCHAR2(100), 
+	"WRITER" VARCHAR2(100)
+   )
+   
+   
+DROP TABLE RECOMMEND --테이블을 통째로 삭제(흔하지 않음, 그 안에 데이더 다 날라감)
+
+
+ALTER TABLE HR.RECOMMEND ADD VIEWCOUNT NUMBER(38,0) NULL;
+
+ALTER TABLE HR.RECOMMEND MODIFY TITLE VARCHAR2(300) NULL;
+
+
+CREATE TABLE "HR"."RECOMMEND" (	
+	"RE_DNO" NUMBER(38,0), 
+	"TITLE" VARCHAR2(100), 
+	"CONTENTS" VARCHAR2(100), 
+	"WRITER" VARCHAR2(100)
+   )
+   
+   
+   
+   CREATE TABLE "HR"."BOARD3" 
+  (	"BOARDNO" NUMBER(38,0), 
+	"TITLE" VARCHAR2(100), 
+	"CONTENTS" VARCHAR2(100), 
+	"WRITER" VARCHAR2(100), 
+	"WRITEDATE" DATE, 
+	"RECOMMEND" NUMBER(38,0), 
+	"VIEWCOUNT" NUMBER(38,0)
+   )
+   
+   
+   ALTER TABLE BOARD3 MODIFY WRITER VARCHAR(200)
+   
+   ALTER TABLE BOARD3 DROP COLUM VIEWCOUNT
+   
+   ALTER TABLE BOARD3 ADD TEST2 VARCHAR2(100)
+   
+   DROP TABLE BOARD3 
+   
+   
+   --DCL: DB를 관리, 제어해주는 문법 (계정생성, 계정권한주여, 백업, 복구)
+   --ID: apple, PW: a1234
+   
+   CREATE USER apple IDENTIFIED BY a1234 
+   
+   GRANT CONNECT, dba TO apple
+   
+   
+   --PRODUCT22생성, 아이디를 PRIMARY키로 지정
+   
+   CREATE TABLE "HR"."PRODUCT222" 
+   ("ID" VARCHAR2(100) PRIMARY key, 
+	"NAME" VARCHAR2(100), 
+	"CONTENT" VARCHAR2(100), 
+	"PRICE" NUMBER(38,0)
+   )
+   
+   
+   INSERT INTO MEMBER VALUES ('100','100','park','011')
+
+INSERT INTO MEMBER VALUES ('200','200','park','011')
+
+INSERT INTO MEMBER VALUES ('300','300','park','011')
+   
+   SELECT * FROM MEMBER
+   
+    SELECT * FROM MEMBER WHERE ID='100' --ID가 100인 컬럼
+    
+    SELECT ID FROM MEMBER WHERE ID='100'
+    
+    SELECT TEL FROM MEMBER WHERE NAME = 'ICE'
+    
+     UPDATE MEMBER SET NAME = 'KIM' --> WHERE을 안써주면모든 이름이 KIM으로 바뀜
+   
+    UPDATE MEMBER SET NAME = 'KIM' WHERE ID='100'
+    
+    UPDATE MEMBER SET NAME = 'YANG' WHERE ID='200'
+    
+    DELETE FROM MEMBER WHERE ID='100'
+    
+    SELECT * FROM MEMBER WHERE ID='100' AND TEL='011'
+    
+    SELECT * FROM MEMBER WHERE ID='200' OR TEL='011'
+    
+    -- --------------------------
+    
+    CREATE TABLE PRODUCT(
+    ID VARCHAR2(200),
+    NAME VARCHAR2(200),
+    CONTENT VARCHAR2(200),
+    PRICE VARCHAR2(200),
+    COMPANY VARCHAR2(200),
+    IMG VARCHAR2(200)
+    )
+    
+    
+    SELECT * FROM MWMBER ORDER BY ID -- 오름차순
+    
+     SELECT * FROM MWMBER ORDER BY ID DESC -- 내림차순
+    
+     -- 정리문제-------------
+     --price로 내림차순 정렬하여 전체컬럼 검색
+     
+    SELECT * FROM PRODUCT ORDER BY PRICE DESC 
+    
+    --company로 오름차순 정렬하여 제품의 이름, 내용, 가격 검색
+    
+    SELECT NAME, CONTENT, PRICE FROM PRODUCT  ORDER BY COMPANY
+    
+    --id가 100인 제품의 이름과 가격 검색
+    
+    SELECT NAME, PRICE FROM PRODUCT WHERE ID = '100'
+    
+    --price가 5000인 제품명과 회사명
+    
+     SELECT NAME,COMPANY FROM PRODUCT WHERE PRICE='5000'
+    
+ 	--id가 100이고 가격이 1000인 제품명과 이미지 검색
+     
+      SELECT CONTENT,IMG FROM PRODUCT WHERE ID ='100' AND PRICE='1000'
+     
+	--회사명이 c100인 회사명과 제품명
+      
+      SELECT COMPANY,CONTENT FROM PRODUCT WHERE COMPANY='c100' 
+      
+	--회사명이 c100, c200인 제품명과 가격
+      
+      SELECT CONTENT,PRICE FROM PRODUCT WHERE COMPANY='c100' OR COMPANY='c200'
+      
+	--price가 5000원인 제품의 content를 품절로 수정
+      
+      UPDATE PRODUCT SET CONTENT = '품절' WHERE PRICE = '5000'
+      
+	--id가 100, 102번 제품의 img를 o.png로, price를 10000으로 수정
+      
+       UPDATE PRODUCT SET IMG= 'o.png', PRICE = '10000' WHERE ID='100','102'
+      
+	--id가 101번 제품의 company를 apple, name은 appleshoes로 수정
+       
+        UPDATE PRODUCT SET COMPANY= 'APPLE', NAME = 'APPLESHOES' WHERE ID='101'
+       
+	--name이 shoes1이거나 id가 107인 제품 삭제
+        
+        DELETE FROM PRODUCT WHERE NAME='SHOES1' OR ID='107'
+        
+	--회사명이 c100인 경우 모든 정보 삭제
+        
+        DELETE FROM PRODUCT WHERE COMPANY='c100'
+        
+	--테이블의 모든 정보 삭제
+        
+          DROP TABLE PRODUCT
+          
+          
+          
+          -- FK&DK 연결----------------
+          
+     CREATE TABLE "HR"."REPLY" (	
+		"ID" VARCHAR2(100), 
+		"ODIID" VARCHAR2(100), 
+		"CONTENT" VARCHAR2(100), 
+		"WRITER" VARCHAR2(100)
+   )
