@@ -1,0 +1,58 @@
+-- 피드 
+-- 아이디, 내용, 작성일자 DATE, 조회수 NUMBER, 좋아요 NUMBER
+
+-- 사용자
+-- 아이디, 이메일, 이름, 전화번호
+--------------------------------------------------------
+-- 조별활동 멀티캠퍼스 홈페이지 엔티티(게시글피드 / 사용자설정에서 계정설정)
+
+CREATE TABLE feed
+(
+	피드아이디 varchar(100) PRIMARY KEY,
+	아이디 varchar2(100),
+	내용 varchar2(100),
+	날짜 DATE,
+	조회수 number(38,0),
+	좋아요 number(38,0)
+)
+
+CREATE TABLE feeduser
+(
+	아이디 varchar2(100) PRIMARY KEY,
+	이메일 varchar2(100),
+	이름 varchar2(100),
+	전화 varchar2(100)
+)
+
+ALTER TABLE feed
+ADD CONSTRAINT fk_feeduser
+FOREIGN KEY (아이디)
+REFERENCES feeduser(아이디)
+
+INSERT INTO feeduser
+VALUES ('aa', 'a@a', '홍길동', '111')
+
+INSERT INTO feeduser
+VALUES ('ab', 'b@a', '김민수', '112')
+
+INSERT INTO FEED 
+VALUES ('1', 'aa', 'asd', sysdate, 0, 0)
+
+INSERT INTO FEED 
+VALUES ('2', 'aa', 'asd2', sysdate, 0, 0)
+
+UPDATE FEEDUSER 
+SET 아이디 = 'bb'
+WHERE 전화 = '112'
+
+UPDATE FEED  
+SET 아이디 = 'bb'
+WHERE 피드아이디 = '2'
+
+SELECT *
+FROM FEED f 
+INNER JOIN FEEDUSER f2 
+ON (f.아이디 = f2.아이디)
+
+DELETE feed
+WHERE 피드아이디 = '2'
