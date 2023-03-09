@@ -112,6 +112,34 @@ public class MemberUI2 {
 				}
 			}//action
 		}); //b3
+
+		//검색기능 
+				b4.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						System.out.println("회원검색처리");
+						String id = t1.getText();
+						
+						MemberDAO3 dao = new MemberDAO3();
+						MemberVO bag = dao.one(id); //MemberVO
+						if (bag != null) {
+							t2.setText(bag.getPw());
+							t3.setText(bag.getName());
+							t4.setText(bag.getTel());
+							t2.setBackground(Color.pink);
+							t3.setBackground(Color.pink);
+							t4.setBackground(Color.pink);
+						}
+						else {
+							JOptionPane.showInputDialog(f, "검색결과 없음.");
+							t2.setText("");
+							t3.setText("");
+							t4.setText("");
+						}
+						
+					}//action
+				}); //b4
 		
 		
 		
