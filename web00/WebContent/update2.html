@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+<style type="text/css">
+body {
+	background: #18de02;
+}
+
+button {
+	background: pink;
+}
+
+.t1 { /*.은 클래스 선택, 여러 개 선택*/
+	background: yellow;
+	width: 150px;
+	text-align: center;
+}
+#b1 {
+color: red;
+}
+
+</style>
+
+
+</head>
+<body>
+	<h3>회원정보변경 페이지</h3>
+
+<form action="update2.jsp">
+	
+	<table border="1">
+		<tr>
+			<td class="t1">번호 : </td>
+			<td>
+				<input name="no">
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="t1">contents: </td>
+			<td>
+				<input name="contents">
+			</td>
+		</tr>11
+		
+		
+		<tr>
+			
+			<td colspan="2" class="t1">
+			<button id = "b2"> 회원정보변경 데이터 전송</button>
+			</td>
+		</tr>
+		
+	</table>
+</form>
+
+</body>
+</html>

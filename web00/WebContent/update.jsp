@@ -1,3 +1,5 @@
+<%@page import="multi.MemberDAO3"%>
+<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 
@@ -10,6 +12,14 @@
    
    String id = request.getParameter("id"); //"apple"
    String tel = request.getParameter("tel"); //"010"
+   
+   MemberVO bag = new MemberVO();
+   bag.setTel(tel);
+   bag.setId(id);
+   
+   MemberDAO3 dao = new MemberDAO3();
+   dao.update(bag);
+   
     %>
     
     

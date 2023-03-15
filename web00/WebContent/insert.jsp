@@ -1,3 +1,5 @@
+<%@page import="multi.MemberDAO3"%>
+<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 
@@ -12,6 +14,20 @@
    String pw = request.getParameter("pw"); //"1234"
    String name = request.getParameter("name"); //"apple"
    String tel = request.getParameter("tel"); //"010"
+   
+   //import단축키 : ctrl + shift + m
+ //가방을 만들어서 값들을 넣고(set)!
+ 	MemberVO bag = new MemberVO();
+     bag.setId(id);
+     bag.setPw(pw);
+     bag.setName(name);
+     bag.setTel(tel);
+     
+     
+ 	//dao에게 가방을 전달하자.!
+ 	MemberDAO3 dao = new MemberDAO3();
+ 	dao.insert(bag);
+   
     %>
     
     

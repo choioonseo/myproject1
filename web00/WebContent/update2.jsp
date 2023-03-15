@@ -1,5 +1,3 @@
-<%@page import="multi.MemberDAO3"%>
-<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 
@@ -10,12 +8,8 @@
    //tomcat은 미리 request 객체를 만들어서 내장시켜 놨음!!!!!!
    //즉, 그냥 request라고 쓰기만 하면 new의 부품을 사용할 수 있음.
    
-   String id = request.getParameter("id"); //"apple"
-   
-   
-   MemberDAO3 dao = new MemberDAO3();
-   dao.delete(id);
- 
+   String no = request.getParameter("no"); //"010"
+   String contents = request.getParameter("contents"); //"010"
     %>
     
     
@@ -33,9 +27,12 @@ body {
 
 </head>
 <body>
-회원정보삭제 요청되었음.
+회원정보수정 요청되었음.
 <hr color="red">
-삭제할 id : <%= id %> <br>
+
+당신이 수정을 원하는 번호는 : <%= no %><br>
+당신이 수정을 원하는 contents는 : <%= contents %><br>
+
 
 </body>
 </html>
