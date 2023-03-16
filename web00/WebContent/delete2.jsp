@@ -1,3 +1,4 @@
+<%@page import="multi.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
@@ -7,6 +8,9 @@
     	//car.run();
     	String no = request.getParameter("no"); //String, "100" 
     	//JSP안에 만들어진 변수는 서버의 RAM에 저장되는 지역변수!
+    	
+    	BbsDAO dao = new BbsDAO();
+    	dao.delete(Integer.parseInt(no));
     	
     %>
 <!DOCTYPE html>

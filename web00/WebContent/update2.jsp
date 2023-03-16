@@ -1,5 +1,9 @@
+<%@page import="sun.awt.image.PixelConverter.Bgrx"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+    
+<%@page import="multi.BbsDAO"%>
+<%@page import="multi.BbsVO"%>
 
 
 <%
@@ -9,7 +13,16 @@
    //즉, 그냥 request라고 쓰기만 하면 new의 부품을 사용할 수 있음.
    
    String no = request.getParameter("no"); //"010"
-   String contents = request.getParameter("contents"); //"010"
+   String content = request.getParameter("content"); //"010"
+   
+   BbsVO bag = new BbsVO();
+   bag.setNo(Integer.parseInt(no));
+   bag.setContent(content);
+  
+   
+   BbsDAO Dao = new BbsDAO();
+   Dao.update(bag);
+   
     %>
     
     
@@ -31,7 +44,7 @@ body {
 <hr color="red">
 
 당신이 수정을 원하는 번호는 : <%= no %><br>
-당신이 수정을 원하는 contents는 : <%= contents %><br>
+당신이 수정을 원하는 content는 : <%= content %><br>
 
 
 </body>
