@@ -46,8 +46,6 @@ public class MovieVO {
 				+ ", director=" + director + "]";
 	}
 	
-	
-
 
 }
 

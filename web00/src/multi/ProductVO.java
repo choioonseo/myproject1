@@ -5,7 +5,7 @@ public class ProductVO {
 	private String id;
 	private String name;
 	private String content;
-	private String price;
+	private int price;
 	private String company;
 	private String img;
 	
@@ -27,10 +27,10 @@ public class ProductVO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	public String getCompany() {
