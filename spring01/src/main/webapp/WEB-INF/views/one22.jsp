@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-게시글 하나를 검색함.
+${bag.no}, ${bag.title}, ${bag.content}, ${bag.writer}
 
 </body>
 </html>

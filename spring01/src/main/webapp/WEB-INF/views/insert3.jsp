@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원 하나의 검색이 완료되었습니다.
-${bag.id}
-
+name, url, img가 등록되었습니다.
 </body>
 </html>

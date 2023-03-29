@@ -2,6 +2,7 @@ package com.multi.mvc01;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller //스프링에서 제어하는 역할로 등록! 
@@ -48,14 +49,19 @@ public class BbsController {
 		dao.delete(no);
 	}
 	
+	
 	@RequestMapping("one22")
-	public void one(int no) {
-		System.out.println("one요청됨.");
+	public void one(int no, Model model) {
+		System.out.println("one 요청됨");
 		System.out.println(no);
+		BbsVO bag =  dao.one(no); //bag에 검색결과가 들어있을 것임.
+		model.addAttribute("bag", bag);
 	}
+
 	
 	@RequestMapping("list22")
 	public void list() {
 		
 	}
+	
 }

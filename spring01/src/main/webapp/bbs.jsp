@@ -38,7 +38,7 @@
 <h3>게시판 검색 화면입니다. </h3>
 <hr color="red">
 <form action="one22" method="get">
-	no : <input name="no" value="1"><br>
+	no : <input name="no" value="2"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
