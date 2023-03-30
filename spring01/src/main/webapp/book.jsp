@@ -20,10 +20,13 @@
 
 
 <hr color="red">
+<a href="list3">북마크 전체 목록 가지고 오기 </a><br>
 <form action="one3.multi" method="get">
 	아이디 : <input name="id" value="3"><br>
 	<button type="submit">서버로 전송</button>
 </form>
+
+
 
 </body>
 </html>

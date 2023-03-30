@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-${bag.no}, ${bag.title}, ${bag.content}, ${bag.writer}
-
+<%
+	session.setAttribute("view", 0);
+%>
+<hr>서버에 세션 속성등록함. 
+<a href="page04.jsp">session속성가지고오기</a>
 </body>
 </html>

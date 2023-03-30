@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${bag.no}, ${bag.title}, ${bag.content}, ${bag.writer}
-
+${bag.id}, ${bag.name}, ${bag.address}, ${bag.score}, ${bag.img}
 </body>
 </html>

@@ -127,6 +127,8 @@ public class MemberDAO3 { //CRUD
 
 	}
 	
+
+	
 	public MemberVO one(String id) {
 		ResultSet rs = null; //항목명 + 결과데이터를 담고 있는 테이블
 		//기본형 정수/실수/문자/논리만 값으로 초기화

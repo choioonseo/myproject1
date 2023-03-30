@@ -1,5 +1,7 @@
 package com.multi.mvc01;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -80,9 +82,13 @@ public void one(String id, Model model) {
 	
 }
 
-@RequestMapping("list.multi")
-public void list(MemberVO bag) {
-	System.out.println("list.multi 요청됨.");
-}
+@RequestMapping("list")
+public void list(Model model) {
+	//Model은 컨트롤러의 list를 views/list.jsp까지만 전달할 수 있는 객체 
+	ArrayList<MemberVO> list = dao.list();
+	model.addAttribute("list", list);
+	
+	
 
+}
 }

@@ -16,4 +16,10 @@ public class BookController {
 		BookVO bag =  dao.one(id); //bag에 검색결과가 들어있을 것임.
 		model.addAttribute("bag", bag);
 	}
+	
+	@RequestMapping("list3")
+	public void list3(String id, Model model) {
+		BookVO bag =  dao.one(id); //bag에 검색결과가 들어있을 것임.
+		model.addAttribute("bag", bag);
+	}
 }

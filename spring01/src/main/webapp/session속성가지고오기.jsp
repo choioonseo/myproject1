@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-${bag.no}, ${bag.title}, ${bag.content}, ${bag.writer}
-
+로그인한 사람의 id는 <%= session.getAttribute("user") %><br>
+현재 오늘 방문횟수는 <%= session.getAttribute("count") %>번
+<hr color="red">
 </body>
 </html>
