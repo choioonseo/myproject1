@@ -2,6 +2,8 @@ package com.multi.mvc01;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,7 +29,7 @@ public class MemberController {
 		//써주어야 한다. 
 	
 	@RequestMapping("login") //클라이언트가 login을 요청하면
-	public String login(MemberVO bag) {
+	public String login(MemberVO bag, HttpSession session) {
 			System.out.println(bag);
 			//dao를 이용해서 db처리할 예정
 			//views아래로 남어감
@@ -35,6 +37,7 @@ public class MemberController {
 			int result = dao.login(bag);
 			if (result == 1)
 			{
+				session.setAttribute("id", bag.getId());
 				return "ok";
 			}
 			else {
