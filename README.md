@@ -118,6 +118,7 @@
    * [👉이미지로 전체 흐름 확인하기](null)
 	
 </details>
+
 <details>
   <summary>⚽트러블 슈팅</summary>
 ​
@@ -158,6 +159,7 @@
   <div markdown="1">    
 ​
   ```java
+	'''
 	  //비정상 작동 코드
 	 if (${'vo.landNumAddress'} || '${vo.roadNameAddress}') {  
 	  geocoder.addressSearch(address, function(result, status) {
@@ -174,5 +176,4 @@
 ​
 <br>
 	
-</details>
 
