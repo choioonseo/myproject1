@@ -154,6 +154,7 @@
 	
 	
 	split 함수에 대한 개념이해가 부족했었고, 함수를 사용할 때 개념과 특징을 잘 파악하고 사용한다면 오류를 잡는 데에 걸리는 시간을 단축할 수 있겠다는 생각을 하게 되었다. 하지만 첫 번째 시도에서 막히는 부분에 대해서 오랜 시간을 붙잡지 않고 또 다른 방법을 떠올려서 코드를 작성했다는 부분에 있어서 의의가 있다.
+	  </div>
 </details>
 	
   ##### `2. Null Point Exception`
@@ -181,7 +182,7 @@
 	geocoder.addressSearch(address, function(result, status) {
 
   ```
-  </div>
+
 </details>
 ​
 <br>
