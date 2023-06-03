@@ -135,27 +135,9 @@
   * 두 번째 시도 : 두 클래스를 하나의 클래스로 구현해도 될 것 같다는 생각에 JoinCkValidator클래스를 만들어 코드를 합친 후 바인딩할 객체가 하나이기 때문에 setValidator() 메서드로 변경 -> ❌비정상작동
     * 하고자 했던 바인딩을 통한 유효성 검사는 잘 되었지만, 잘 되던 데이터 형식 유효성 검사가 작동하지 않았다.
   * 세 번째 시도 : 객체가 하나이지만 혹시나 하는 마음에 addValidators() 메서드로 다시 변경 -> ⭕정상작동!
+
 	
-<details>
-  <summary>👉코드확인</summary>
-​
-  <div markdown="1">    
-​
-  ```java
-	'''
-	  //비정상 작동 코드
-	 if (${'vo.landNumAddress'} || '${vo.roadNameAddress}') {  
-	  geocoder.addressSearch(address, function(result, status) {
 
-	  
-	  //정상 작동 코드
-	  
-	if ('${vo.landNumAddress}' || '${vo.roadNameAddress}') {  
-	geocoder.addressSearch(address, function(result, status) {
-
-  ```
-
-</details>
 	
 	<details>
 	 * 일련의 규칙을 가진 이미지 출력 방법은 여러가지가 있다. 
@@ -164,8 +146,10 @@
 	split 함수에 대한 개념이해가 부족했었고, 함수를 사용할 때 개념과 특징을 잘 파악하고 사용한다면 오류를 잡는 데에 걸리는 시간을 단축할 수 있겠다는 생각을 하게 되었다. 하지만 첫 번째 시도에서 막히는 부분에 대해서 오랜 시간을 붙잡지 않고 또 다른 방법을 떠올려서 코드를 작성했다는 부분에 있어서 의의가 있다.
 	  </div>
 	</details>
+	
+	
  ##### `2. Null Point Exception`
-	** 문제상황: 메인페이지의 지도 위의 마커를 클릭했을 때 나의 상세페이지로 넘어오도록 구현하는 과정에서, no값이 아닌 landNumAddress를 기준으로 CRUD 기능이 수행되도록 변경하는 과정에서 null-point-exception 발생
+	** !!문제상황!!**: 메인페이지의 지도 위의 마커를 클릭했을 때 나의 상세페이지로 넘어오도록 구현하는 과정에서, no값이 아닌 landNumAddress를 기준으로 CRUD 기능이 수행되도록 변경하는 과정에서  Null Point Exception 발생
 	
   * 첫 번째 시도 : no -> landNumAddress로 바꾸는 작업이 mzlistMapper, mzlistController, mzlistDAO에도 모두 알맞게 반영이 되었는지 확인 -> ⭕모두 반영됨!
   * 두 번째 시도 : controller 부분에서 값을 전달받을 때 system.out.println(vo)로 값을 출력해보면서 값이 유실된 지점을 체크 ->  landNumAddress와 model값이 전달될 때 값 전달⭕! dao.one()메서드가 null!!❌값을 반환
