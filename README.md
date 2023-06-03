@@ -161,12 +161,10 @@
 ​
   <div markdown="1">    
 ​
-  ```
+  ```java
 	  //비정상 작동 코드
 	 if (${'vo.landNumAddress'} || '${vo.roadNameAddress}') {  
 	  geocoder.addressSearch(address, function(result, status) {
-
-	  
 	  //정상 작동 코드
 	  
 	if ('${vo.landNumAddress}' || '${vo.roadNameAddress}') {  
