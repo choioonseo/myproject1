@@ -150,7 +150,27 @@
   * 두 번째 시도 : 두 클래스를 하나의 클래스로 구현해도 될 것 같다는 생각에 JoinCkValidator클래스를 만들어 코드를 합친 후 바인딩할 객체가 하나이기 때문에 setValidator() 메서드로 변경 -> ❌비정상작동
     * 하고자 했던 바인딩을 통한 유효성 검사는 잘 되었지만, 잘 되던 데이터 형식 유효성 검사가 작동하지 않았다.
   * 세 번째 시도 : 객체가 하나이지만 혹시나 하는 마음에 addValidators() 메서드로 다시 변경 -> ⭕정상작동!
+	<details>
+	
+  <summary>👉코드확인</summary>
 
+	  <div markdown="1">    
+
+  ```java
+	'''
+	  //비정상 작동 코드
+	 if (${'vo.landNumAddress'} || '${vo.roadNameAddress}') {  
+	  geocoder.addressSearch(address, function(result, status) {
+
+	  
+	  //정상 작동 코드
+	  
+	if ('${vo.landNumAddress}' || '${vo.roadNameAddress}') {  
+	geocoder.addressSearch(address, function(result, status) {
+
+  ```
+
+</details>
 	
 
 	
