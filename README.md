@@ -128,8 +128,7 @@
    * **‼결과‼** 상세정보페이지에 해당하는 음식점이 지도 위에 마커로 표시되며, 좌상단의 카테고리별 장소를 클릭하면 장소들이 마커 기준으로 근처에 있는 해당 장소들의 마커가 띄워지고, 마커를 클릭했을 때 카카오맵으로 이동됨.
 	![image](https://github.com/choioonseo/myproject1/assets/124110679/b01a27ee-9d37-4d85-885b-acce8e4bfdb6)
 
-	
-</details>
+
 
 	
 	
@@ -139,7 +138,7 @@
 	
 	
 	
-	<details>
+<details>
   <summary>⚽ 트러블 슈팅</summary>
 
   * `일련의 규칙이 있는 이미지 출력 과정에서의 오류`, `CRUD 과정에서 NullPointException`, 'URL복사기능에서의 오류',`API사용과정에서의 오류`에 관한 트러블 슈팅
