@@ -97,8 +97,8 @@
 	* encodeURIComponent() -> name, landAddress, roadAddress를 URL 인코딩하기 위함.
   * 변수 설정
 	* 'naverMapsURL' 변수를 생성해서 네이버 지도 URL을 할당
-		if) 'landAddress'!= null 이면 해당 주소를 추가로 전달
-		if) 'roadAddress'!= null 이면 해당 주소를 추가로 전달
+		* if) 'landAddress'!= null 이면 해당 주소를 추가로 전달
+		* if) 'roadAddress'!= null 이면 해당 주소를 추가로 전달
 	
   * location.href
 	* JavaScript에서 현재 문서의 URL을 나타내는 속성인 location.href를 사용하여 생성된 URL로 페이지 이동
@@ -121,21 +121,10 @@
 			* address에는 변환할 주소가 전달되고, 콜백 함수 내부에서 변환 결과를 처리
 	
 	
-  * 해당 음식점의 위치를 기반으로 카테고리별 장소 검색
-		* API 코드 사용
-	
-	
-	
    * **‼결과‼** 상세정보페이지에 해당하는 음식점이 지도 위에 마커로 표시되며, 좌상단의 카테고리별 장소를 클릭하면 장소들이 마커 기준으로 근처에 있는 해당 장소들의 마커가 띄워지고, 마커를 클릭했을 때 카카오맵으로 이동됨.
 	![image](https://github.com/choioonseo/myproject1/assets/124110679/b01a27ee-9d37-4d85-885b-acce8e4bfdb6)
 
 </details>
-
-	
-	
-	
-	
-	
 	
 	
 	
@@ -224,7 +213,7 @@
   * URL복사 버튼을 눌렀을 때 해당 페이지와 동일한 주소가 복사되어야 하는데, 고정된 기본 URL 주소의 일부(변수: 'base_url') + 추가적으로 붙게 되는 URL(변수: 'url') 부분에서 기존의 주소와 다른 %등과 같은 추가 기호와 함께 변수가 그대로 출력되어서 주소가 일치하지 않음.
   
   #### ❓ 왜 이런 문제가 발생하지? - 원인 추론
-  1. ${vo.landNumAddress} 주소값을 제대로 전달되지 않았을 것것
+  1. ${vo.landNumAddress} 주소값을 제대로 전달되지 않았을 것
   
   #### 이렇게 하면 해결되려나? - 시도
     1. 주소로 전달된 문자열에 포함될 수 있는 특수문자나 공백 등의 문제 ❌ 
