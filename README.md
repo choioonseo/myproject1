@@ -126,14 +126,19 @@
   * 네 번째 시도 : jsp파일에서 landNumAddress 파라미터를 정확하게 전달하고 있는지 확인 -> jsp에서 주소값을 입력하는 형식에 오류 발견 (' '로 인해 landNumAddress을 문자열로 인식)
   * 다섯 번째 시도 : jsp에서 주소값을 입력하는 형식 수정 -> ⭕정상작동!
 <details>
+	
   <summary>👉코드확인</summary>
 ​
-  <div markdown="1">    
-​
+
+	  <div markdown="1">    
+
   ```java
+	'''
 	  //비정상 작동 코드
 	 if (${'vo.landNumAddress'} || '${vo.roadNameAddress}') {  
 	  geocoder.addressSearch(address, function(result, status) {
+
+	  
 	  //정상 작동 코드
 	  
 	if ('${vo.landNumAddress}' || '${vo.roadNameAddress}') {  
@@ -142,11 +147,8 @@
   ```
 
 </details>
-​
-<br>
-	
-	
 </details>
+
 	
  
 	
